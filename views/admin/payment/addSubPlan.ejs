@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mental Health Counseling System</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-white">
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-white" href="#">MHCS | Admin Profile</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav text-white ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/staff">Staff</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/doctorList">Doctor List</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/userList">User List</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/payment">Payments</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">System Statistics</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/forum">Forum</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/feedback">Feedback</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>New Subscription Plan</h3>
+                    <form method="post" action="/addSubPlan">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="name"><strong>Plan name:</strong></label>
+                                    <input type="text" class="form-control" name="name" required id="name" placeholder="Name"/>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="duration"><strong>Duration(In days):</strong></label>
+                                    <input type="number" min="1" class="form-control" name="duration" required id="duration" placeholder="Duration"/>
+                                </div>
+                            </div>
+                        
+                        <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="features"><strong>Features:</strong></label>
+                                    <textarea class="form-control" name="features" required id="features" placeholder="Features" rows="5"></textarea>
+                                </div>
+                            </div>
+                        
+                        <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="price"><strong>Price(In taka):</strong></label>
+                                    <input type="text" class="form-control" name="price" required id="price" placeholder="Price"/>
+                                </div>
+                            </div>
+                        </div>
+                            
+                            <div class=" col-12">
+                                <input type="submit" class="btn btn-block btn-primary" value="Submit" id="submit"/>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-auto">
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript" src="/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="/popper/popper.min.js"></script>
+<script type="application/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

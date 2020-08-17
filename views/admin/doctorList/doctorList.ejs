@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mental Health Counseling System</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-white">
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-white" href="#">MHCS | Admin Profile</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav text-white ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/staff">Staff</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/doctorList">Doctor List</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/userList">User List</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/payment">Payments</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">System Statistics</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/forum">Forum</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/feedback">Feedback</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<div class="container mt-2 text-center">
+    <div class="row">
+        <div class="col-12 col-md-12 offset-md-0">
+            <div class="card">
+                <table class="table table-hover table-striped text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>License no.</th>
+                            <th>Qualification</th>
+                            <th>Speciality</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       <%for (var i =0; i<results.length;i++){%>
+                           <tr>
+                               <td><%=results[i].d_id%></td>
+                               <td><%=results[i].name%></td>
+                               <td><%=results[i].email%></td>
+                               <td><%=results[i].phone%></td>
+                               <td><%=results[i].gender%></td>
+                               <td><%=results[i].license_num%></td>
+                               <td><%=results[i].qualifications%></td>
+                               <td><%=results[i].specialty%></td>
+                               <td colspan="2"><button class="btn btn-success <%=results[i].disable%> accept" name="accept" id="accept" data-toggle="modal" data-target="#accept<%=results[i].id%>">Accept</button>
+                               <a href="/doctorList/delete/<%= results[i].d_id %>" style="color:red;" > DECLINE </a> </td>
+                           </tr>
+                      <% }%>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-auto">
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript" src="/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="/popper/popper.min.js"></script>
+<script type="application/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
